@@ -2,7 +2,7 @@
  長谷部エンジニア養成所 - 勉強会サンプルコード
  課題内容：自分が参加しているカードのみを、スプレッドシートに書き出す
  URL: https://haseblog.org
- Date: 2020-05-12
+ Date: 2020-05-13
  Copyright © 2020 haseblog. All rights reserved.
 *************************************************************/
 /*
@@ -13,13 +13,13 @@
 function getCard() {
     var cards = [];
     // 開発者向けAPIキー
-    var trelloKey = "366f01ead312011709aee25ec14c74dc"; // ★★★
+    var trelloKey = ""; // ★★★
     // 開発者トークン
-    var trelloToken = "5af9665801c71d8ca7ce8643ccac402fbf8871365317e6aa74d1044ec685ec7b"; // ★★★
+    var trelloToken = ""; // ★★★
     // リストID
     var listId = "5e99d1e7aee8c765d2c72850";
     // 自分のID
-    var myId = "5e996e49b94d481b63fb68fd";// ★★★
+    var myId = "";// ★★★
     // カード一覧取得
     var json = getCards(listId, trelloKey, trelloToken);
 
