@@ -106,7 +106,7 @@ function setSpreadsheet(cards) {
     // アクティブなワークブックを指定する
     var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
     // シート名を指定してシートを取得する
-    var sheet = spreadsheet.getSheetByName('list4'); // ★★★
+    var sheet = spreadsheet.getSheetByName(''); // ★★★
     // 行番号, 列番号, 行数, 列数を指定し、カード情報を設定
   
     sheet.getRange(2, 1, cards.length, cards[0].length).setValues(cards);
@@ -121,7 +121,7 @@ function clear() {
     // アクティブなワークブックを指定する
     var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
     // シート名を指定してシートを取得する
-    var sheet = spreadsheet.getSheetByName('list4'); // ★★★
+    var sheet = spreadsheet.getSheetByName(''); // ★★★
     // 行番号, 列番号, 行数, 列数を指定し、スプレッドシートの値をクリアする
     sheet.getRange(2, 1, 20, 5).clear();
 }
