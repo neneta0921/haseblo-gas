@@ -1,9 +1,9 @@
 /************************************************************
  長谷部エンジニア養成所 - 勉強会サンプルコード
- 課題内容：スプレッドシートのA列の左に「No」を追加して1?連番に出力する
+ 課題内容：スプレッドシートのA列の左に「No」を追加して1〜連番に出力する
  URL: https://haseblog.org
  Date: 2020-05-12
- Copyright c 2020 haseblog. All rights reserved.
+ Copyright © 2020 haseblog. All rights reserved.
 *************************************************************/
 /*
  * カード取得
@@ -101,7 +101,7 @@ function setSpreadsheet(cards) {
     // アクティブなワークブックを指定する
     var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
     // シート名を指定してシートを取得する
-    var sheet = spreadsheet.getSheetByName('list3'); // ★★★
+    var sheet = spreadsheet.getSheetByName(''); // ★★★
     // 行番号, 列番号, 行数, 列数を指定し、カード情報を設定
     sheet.getRange(2, 2, cards.length, cards[0].length).setValues(cards);
     // アクティブシートの最終行を取得する
@@ -121,7 +121,7 @@ function clear() {
     // アクティブなワークブックを指定する
     var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
     // シート名を指定してシートを取得する
-    var sheet = spreadsheet.getSheetByName('list3'); // ★★★
+    var sheet = spreadsheet.getSheetByName(''); // ★★★
     // 行番号, 列番号, 行数, 列数を指定し、スプレッドシートの値をクリアする
     sheet.getRange(2, 1, 20, 4).clear()
 }
