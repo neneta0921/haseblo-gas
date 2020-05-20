@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ねねたのtest</title>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://js.cybozu.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://js.cybozu.com/jqgrid/v5.4.0/js/jquery.jqGrid.min.js"></script>
+  <script type="text/javascript" src="https://js.cybozu.com/jqgrid/v5.4.0/js/i18n/grid.locale-ja.js"></script>
+  <script type="text/javascript" src="https://js.cybozu.com/jqgrid/v5.4.0/js/i18n/grid.locale-en.js"></script>
+  <script type="text/javascript" src="https://js.cybozu.com/jqgrid/v5.4.0/js/i18n/grid.locale-cn.js"></script>
+  <script src="script.js">
+    jQuery(document).ready(function () {
+      var mydata = [
+        { rid: "1", model: "ZX-1", model_name: "クリックして名前を入れてください。" },
+        { rid: "2", model: "AX-100", model_name: "クリックして名前を入れてください。" },
+        { rid: "3", model: "T-1000", model_name: "クリックして名前を入れてください。" },
+        { rid: "4", model: "T-1001", model_name: "クリックして名前を入れてください。" },
+        { rid: "5", model: "T-1002", model_name: "クリックして名前を入れてください。" },
+        { rid: "6", model: "T-1003", model_name: "クリックして名前を入れてください。" },
+        { rid: "7", model: "T-1004", model_name: "クリックして名前を入れてください。" },
+        { rid: "8", model: "T-1005", model_name: "クリックして名前を入れてください。" },
+        { rid: "9", model: "T-1006", model_name: "クリックして名前を入れてください。" },
+        { rid: "10", model: "T-1007", model_name: "クリックして名前を入れてください。" },
+        { rid: "11", model: "T-1008", model_name: "クリックして名前を入れてください。" }
+      ];
+
+      jQuery("#list").jqGrid({
+        editurl: 'clientArray',
+        data: mydata,
+        datatype: "local",
+        colNames: ['ID', '型式', '名称'],
+        colModel: [
+          { index: 'rid', name: 'rid', width: 50 },
+          { index: 'model', name: 'model', width: 150, editable: true },
+          { index: 'model_name', name: 'model_name', width: 250, editoptions: { maxlength: 50 }, editable: true }
+        ],
+        width: 450,
+        height: 'auto',
+        cellEdit: true,
+        autoencode: true,
+        cellsubmit: 'clientArray',
+        rowNum: 20,
+        sortname: 'rid',
+        sortorder: "ASC",
+        multiselect: true,
+        caption: '製品一覧'
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="https://js.cybozu.com/jqgrid/v5.4.0/css/ui.jqgrid.css">
+  <link rel="stylesheet" href="https://js.cybozu.com/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqgrid/5.4.0/css/ui.jqgrid-bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqgrid/5.4.0/css/ui.jqgrid-bootstrap4.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqgrid/5.4.0/css/ui.jqgrid.min.css">
+  <style>
+    .toolbar {
+      margin: 5px 0;
+      font-size: 0.8em;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>ねねたのtest</h2>
+  <table id="list">
+  </table>
+
+
+</body>
+
+</html>
